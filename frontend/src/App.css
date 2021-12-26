@@ -103,6 +103,7 @@
 
 .noteadd {
   padding: 5px;
+  background-color: #1f2124;
 }
 
 
@@ -113,13 +114,50 @@
   align-items: center;
 }
 
-
-
-.back-arrow {
-  background-color: #db8b21;
-  border-radius: 50%;
-  padding: 3px;
+.back-arrow svg {
+  fill: #db8b21;
+  width: 20px;
+  margin-right: 8px;
 }
+
+
+.delete-btn {
+  color: #db8b21;
+  outline: none;
+  background-color: #1f2124;
+  border: none;
+  font-size: 15px;
+}
+
+
+.noteadd textarea {
+  background-color: var(--color-white);
+  border: none;
+  padding: 16px 12px;
+  width: 100%;
+  height: 70vh;
+  resize: none;
+  scrollbar-width: none; /* Firefox */
+}
+
+
+
+.noteadd textarea:active,
+.noteadd textarea:focus {
+  outline: none;
+  border: none;
+}
+
+.noteadd textarea::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+
+
+
 
 
 
