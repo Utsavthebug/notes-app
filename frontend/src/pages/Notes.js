@@ -14,7 +14,7 @@ const Notes = () => {
         getNotes();
        },[])
 
-       
+  
     const getNotes = () => {
         axios.get('http://127.0.0.1:8000/api/note/')
         .then((response)=>{
@@ -36,7 +36,11 @@ const Notes = () => {
             </Link>
             )
           })}
-      <AddButton/>  
+      
+      <Link  to="note/new"  style={{ textDecoration: 'none' }}>
+      <AddButton/>         
+      </Link>
+
     </>
     )
 }
