@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Condensed:wght@300&display=swap');
+
+.note-app {
+  margin:0px auto;
+  width: 30vw;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  color: #d9d9d9;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 15px;
+  background-color: #393b37;
+  padding: 0.75em;
+  border-radius: 5px;
+}
+
+.list-count {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+  color: #d9d9d9;
+  background-color: #36302f;
+
+}
+
+.menu {
+  display: flex;
+}
+
+.menu-bar {
+  padding: 4px;
+
+}
+
+.fa-bars {
+  color: #db8b21;
+}
+
+.menu-text{
+  padding: 4px;
+  margin-left: 2px;
+}
+
+.menu-text h4 {
+  color:#db8b21;
+}
+
+
+.count {
+  padding: 5px;
+  margin-right: 2px;
+}
+
+.note-list {
+  display: flex;
+  flex-direction: column;
+  color: #d9d9d9;
+  padding: 8px;
+}
+
+.list-header {
+  padding: 5px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.list-info {
+  font-size: 14px;
+  color: rgba(127, 132, 135, 0.9);
+  padding: 5px;
+}
+
+
+
+.list-body {
+  margin-left: 2rem;
+}
+
+.add-div {
+  position: relative;
+}
+
+.add-btn {
+  position: absolute;
+  right: 5px;
+  background-color: #db8b21 ;
+  border-radius: 50%;
+  padding: 5px;
+  transition: transform .3s ease-out;
+}
+
+.btn-img {
+  max-width: 20px;
+}
+
+.add-btn:hover {
+  cursor: pointer;
+  transform: translate(0, -5px);
+}
+
+.noteadd {
+  padding: 5px;
+}
+
+
+.noteadd-head{
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.back-arrow {
+  background-color: #db8b21;
+  border-radius: 50%;
+  padding: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
