@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 const NoteAdd = () => {
     const {id} = useParams()
-    const [post,setPost] = useState({})
+    const [post,setPost] = useState(null)
     let navigate = useNavigate()
 
     useEffect(()=>{
@@ -29,6 +29,35 @@ const NoteAdd = () => {
     }
 
 
+    const addPost  = () => {
+        console.log(post)
+        axios.post('http://127.0.0.1:8000/api/note/',
+        {
+            body : post.body
+        })
+        .then((response)=>{
+            console.log(response)
+        })
+        .catch((error)=>{
+            console.log(error)
+        })
+    }
+
+
+    const editPost  = () => {
+        axios.patch(`http://127.0.0.1:8000/api/note/${id}/`,
+        {
+            body : post.body
+        })
+        .then((response)=>{
+            console.log(response)
+        })
+        .catch((error)=>{
+            console.log(error)
+        })
+    }
+
+
     const deleteButton = () => {
         axios.delete(`http://127.0.0.1:8000/api/note/${id}/`)
         .then((response)=>{
@@ -39,12 +68,12 @@ const NoteAdd = () => {
 
   const handleClick = () => {
       if(id=='new' && post.body) {
-         // addPost();
+         addPost();
          console.log('new')
       }
 
       else if(id!='new' && post.body) {
-         // editPost();
+         editPost();
          console.log('old one')
       }
 
@@ -70,7 +99,7 @@ const NoteAdd = () => {
         </div>
        </div>
 
-       <textarea onChange={(e)=>setPost({...post,body:e.target.value})} value={post?.body}>
+       <textarea onChange={(e)=>setPost({...post,'body':e.target.value})} value={post?.body}>
 
        </textarea>
 
